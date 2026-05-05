@@ -11,6 +11,7 @@ export default function Hero() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const imgY = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
@@ -20,7 +21,21 @@ export default function Hero() {
     >
       <motion.div 
         style={{ y, opacity }}
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full glow-bg -z-10 opacity-60"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[120%] -z-10 overflow-hidden"
+      >
+        <motion.img 
+          style={{ y: imgY }}
+          src="https://images.unsplash.com/photo-1460317442147-3bd091993843?auto=format&fit=crop&q=80&w=2400" 
+          alt="Visionary Architecture" 
+          className="w-full h-full object-cover opacity-20 grayscale brightness-50"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-midusa-bg via-transparent to-midusa-bg" />
+      </motion.div>
+      
+      <motion.div 
+        style={{ y, opacity }}
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full glow-bg -z-20 opacity-60"
       ></motion.div>
       
       <div className="max-w-6xl relative z-10">

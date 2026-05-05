@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import Hero from "../components/Hero";
+import VisualShowcase from "../components/VisualShowcase";
+import Testimonials from "../components/Testimonials";
 import Services from "../components/Services";
 import Process from "../components/Process";
 import TechStack from "../components/TechStack";
@@ -15,6 +17,8 @@ export default function Home() {
       transition={{ duration: 0.5 }}
     >
       <Hero />
+      <VisualShowcase />
+      <Testimonials />
       <Services />
       <Process />
       <TechStack />
