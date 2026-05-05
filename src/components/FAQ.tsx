@@ -21,22 +21,22 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(1); // Default second one open as in picture
 
   return (
-    <section className="py-48 px-8 border-t border-white/5">
+    <section className="py-48 px-8 border-t border-midusa-border bg-midusa-bg">
       <div className="max-w-4xl mx-auto">
-        <div className="text-[9px] font-bold uppercase tracking-[0.5em] text-white/30 mb-12 text-center">/ Support</div>
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-24 tracking-tight text-white leading-tight">Frequently asked questions.</h2>
-        <div className="space-y-px bg-white/10 border border-white/10 bg-grid">
+        <div className="text-[9px] font-bold uppercase tracking-[0.5em] text-midusa-text-dim mb-12 text-center">/ Support</div>
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-24 tracking-tight text-midusa-text leading-tight">Frequently asked questions.</h2>
+        <div className="space-y-px bg-midusa-border border border-midusa-border bg-grid">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-[#030812] p-8 md:p-12 cursor-pointer transition-colors duration-500 hover:bg-white/[0.02]"
+              className="bg-midusa-surface p-8 md:p-12 cursor-pointer transition-colors duration-500 hover:bg-midusa-text/5"
               onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
             >
               <div className="flex justify-between items-center gap-8">
-                <h4 className={`font-display text-lg md:text-xl font-bold tracking-tight transition-colors duration-500 ${openIdx === idx ? "text-white" : "text-white/40 group-hover:text-white"}`}>
+                <h4 className={`font-display text-lg md:text-xl font-bold tracking-tight transition-colors duration-500 ${openIdx === idx ? "text-midusa-text" : "text-midusa-text-dim group-hover:text-midusa-text"}`}>
                   {faq.question}
                 </h4>
-                <div className="shrink-0 text-white/20">
+                <div className="shrink-0 text-midusa-text-dim/50">
                   {openIdx === idx ? <Minus size={18} /> : <Plus size={18} />}
                 </div>
               </div>
@@ -49,7 +49,7 @@ export default function FAQ() {
                     transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
-                    <p className="text-white/40 text-sm md:text-base mt-8 leading-relaxed font-body max-w-2xl">
+                    <p className="text-midusa-text-dim text-sm md:text-base mt-8 leading-relaxed font-body max-w-2xl">
                       {faq.answer}
                     </p>
                   </motion.div>

@@ -57,14 +57,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-48 px-8 relative border-t border-white/5 bg-[#01040a]">
+    <section id="services" className="py-48 px-8 relative border-t border-midusa-border bg-midusa-bg">
       <div className="max-w-7xl mx-auto">
         <div className="mb-32">
-          <div className="text-[9px] font-bold uppercase tracking-[0.5em] text-white/30 mb-6">/ Expertise</div>
-          <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tight text-white max-w-3xl">Innovative solutions for complex digital challenges.</h2>
+          <div className="text-[9px] font-bold uppercase tracking-[0.5em] text-midusa-text-dim mb-6">/ Expertise</div>
+          <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tight text-midusa-text max-w-3xl">Innovative solutions for complex digital challenges.</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-midusa-border border border-midusa-border">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -72,19 +72,19 @@ export default function Services() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#01040a] p-12 lg:p-16 flex flex-col justify-between aspect-square group hover:bg-white/[0.02] transition-colors duration-700"
+              className="bg-midusa-bg p-12 lg:p-16 flex flex-col justify-between aspect-square group hover:bg-midusa-surface transition-colors duration-700"
             >
               <div>
                 <div className="flex justify-between items-start mb-12">
-                  <span className="text-[10px] font-bold text-white/20">0{index + 1}</span>
-                  <service.icon className="text-white/20 group-hover:text-white transition-colors duration-500" size={24} />
+                  <span className="text-[10px] font-bold text-midusa-text-dim/50">0{index + 1}</span>
+                  <service.icon className="text-midusa-text-dim/50 group-hover:text-midusa-text transition-colors duration-500" size={24} />
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-6 text-white tracking-tight">{service.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed font-body group-hover:text-white/60 transition-colors">{service.description}</p>
+                <h3 className="font-display text-2xl font-bold mb-6 text-midusa-text tracking-tight">{service.title}</h3>
+                <p className="text-midusa-text-dim text-sm leading-relaxed font-body group-hover:text-midusa-text/80 transition-colors">{service.description}</p>
               </div>
               
-              <button className="flex items-center gap-4 text-white/20 font-display text-[9px] font-bold uppercase tracking-[0.3em] group-hover:text-white group-hover:gap-6 transition-all">
-                EXPLORE <div className="w-8 h-px bg-white/20 group-hover:w-12 group-hover:bg-white transition-all"></div>
+              <button className="flex items-center gap-4 text-midusa-text-dim/50 font-display text-[9px] font-bold uppercase tracking-[0.3em] group-hover:text-midusa-text group-hover:gap-6 transition-all">
+                EXPLORE <ArrowRight size={14} className="text-midusa-text-dim/50 group-hover:text-midusa-text transition-colors" />
               </button>
             </motion.div>
           ))}

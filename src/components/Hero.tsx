@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Hero() {
@@ -29,13 +30,13 @@ export default function Hero() {
            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
            className="relative"
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-5 -z-10 blur-xl pointer-events-none">
-            <Logo className="w-full h-full" textColor="text-white" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-10 -z-10 blur-xl pointer-events-none">
+            <Logo className="w-full h-full" textColor="text-midusa-text" />
           </div>
-          <div className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-white/40 mb-12">
+          <div className="font-display text-[9px] font-bold uppercase tracking-[0.4em] text-midusa-text-dim mb-12">
             Digital Design Studio / 2026
           </div>
-          <h1 className="font-display text-6xl md:text-8xl lg:text-[140px] mb-12 text-white font-bold tracking-[-0.05em] leading-[0.85]">
+          <h1 className="font-display text-6xl md:text-8xl lg:text-[140px] mb-12 text-midusa-text font-bold tracking-[-0.05em] leading-[1]">
             Design for <br /> Growth.
           </h1>
         </motion.div>
@@ -44,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="font-body text-base md:text-lg text-white/50 max-w-xl mx-auto mb-16 leading-relaxed"
+          className="font-body text-base md:text-lg text-midusa-text-dim max-w-xl mx-auto mb-16 leading-relaxed"
         >
           We build high-performance digital products that help modern enterprises scale through design excellence.
         </motion.p>
@@ -55,10 +56,10 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center gap-12"
         >
-          <button className="text-white text-[9px] uppercase tracking-[0.4em] font-bold hover:opacity-50 transition-opacity flex items-center gap-4">
-            Work_With_Us <div className="w-10 h-px bg-white/20"></div>
+          <button className="text-midusa-text text-[9px] uppercase tracking-[0.4em] font-bold hover:opacity-50 transition-opacity flex items-center gap-4 group">
+            Work_With_Us <ArrowRight size={14} className="text-midusa-text-dim group-hover:text-midusa-text transition-colors" />
           </button>
-          <button className="text-white/40 text-[9px] uppercase tracking-[0.4em] font-bold hover:text-white transition-all">
+          <button className="text-midusa-text-dim text-[9px] uppercase tracking-[0.4em] font-bold hover:text-midusa-text transition-all">
             Scroll_Explore
           </button>
         </motion.div>
@@ -67,10 +68,10 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-12 flex flex-col items-center gap-4 opacity-20"
+        className="absolute bottom-12 flex flex-col items-center gap-4 opacity-40"
       >
-        <span className="text-[8px] uppercase tracking-[0.6em] font-bold">Scroll_Discover</span>
-        <div className="w-px h-16 bg-white/40"></div>
+        <span className="text-[8px] uppercase tracking-[0.6em] font-bold text-midusa-text-dim">Scroll_Discover</span>
+        <div className="w-px h-16 bg-midusa-border"></div>
       </motion.div>
     </section>
   );

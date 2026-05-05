@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export default function Logo({ className = "w-8 h-8", textColor = "text-white" }: { className?: string, textColor?: string }) {
+export default function Logo({ className = "w-8 h-8", textColor = "text-midusa-text" }: { className?: string, textColor?: string }) {
   return (
     <div className={`flex items-center gap-3 group shrink-0 ${className}`}>
       <svg 
